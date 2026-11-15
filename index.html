@@ -158,7 +158,7 @@
         <div class="links">
           <a class="btn primary" href="https://www.linkedin.com/in/mohammed-payaz/" target="_blank" rel="noopener">Connect on LinkedIn</a>
           <a class="btn" href="https://github.com/MOHAMMEDPAYAZ" target="_blank" rel="noopener">View my GitHub</a>
-          <a class="btn js-resume" href="resume.pdf" target="_blank" rel="noopener" hidden>Download resume</a>
+          <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download resume</a>
           <a class="btn" href="#contact">Get in touch</a>
         </div>
       </div>
@@ -329,7 +329,7 @@
           <li><b>GitHub</b><a href="https://github.com/MOHAMMEDPAYAZ" target="_blank" rel="noopener">github.com/MOHAMMEDPAYAZ</a></li>
           <li><b>Kaggle</b><a href="https://www.kaggle.com/payazmohammed" target="_blank" rel="noopener">kaggle.com/payazmohammed</a></li>
           <li><b>ORCID</b><a href="https://orcid.org/0009-0009-8704-6119" target="_blank" rel="noopener">0009-0009-8704-6119</a></li>
-          <li class="js-resume" hidden><b>Resume</b><a href="resume.pdf" target="_blank" rel="noopener">Download resume (PDF)</a></li>
+          <li><b>Resume</b><a href="resume.pdf" target="_blank" rel="noopener">Download resume (PDF)</a></li>
         </ul>
       </div>
     </div>
@@ -342,9 +342,6 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
-  fetch('resume.pdf', { method: 'HEAD' }).then(function (r) {
-    if (r.ok) document.querySelectorAll('.js-resume').forEach(function (el) { el.hidden = false; });
-  }).catch(function () {});
   window.addEventListener('load', function () {
     document.querySelectorAll('.bar').forEach(function (bar) {
       bar.style.width = bar.dataset.w + '%';
